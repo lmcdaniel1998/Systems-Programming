@@ -1,0 +1,39 @@
+#include <stdio.h>
+#define TABSPACE 8 /* column spacing between tabs */
+
+/* program to replace tabs with proper number of spaces */
+int main() {
+
+  int c, col, tab, x;
+  /* c counts the column number starting at 0 */
+  col = 0;
+  while((c = getchar()) != EOF)
+   
+    if (c != '\n' && c!= '\r') {
+      /* if char is not a tab add to file */
+      if (c != '\t') {
+        putchar(c);
+        /* deal with backspaces here */
+        if (c == '\b') {
+          if (col >= 1) {
+            putchar(c);
+          }
+        }
+      }
+      /* if char is a tab calculate tab spaces */
+      else {
+        tab = (((col / TABSPACE) + 1) * TABSPACE) - col;
+        for (x = 0; x < tab; ++x) {
+          putchar(' ');
+        }
+      }
+      ++col;
+    }
+    else {
+      /* if at the end of a line add new line char then reset line counter*/
+      putchar(c);
+      col = 0;
+    }
+    c = getchar();
+  return 0;
+}

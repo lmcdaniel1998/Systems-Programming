@@ -1,0 +1,57 @@
+-----------------------
+README for Assignment 3
+-----------------------
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+---------
+Designers
+---------
+
+Luke McDaniel (ltmcdani)
+
+-------------
+Functionality
+-------------
+
+This assignment is composed of two seperate programs: hencode 
+and hdecode. The purpose of these programs is to compress a 
+file and decompress it later.
+
+hencode is designed to encode a file and output the compressed
+file to either stdout or a specified file.
+
+hdecode is designed to decode a file and output the decompressed
+contents to either stdout or a specified file.
+
+Currently this program has some trouble when decompressing larger
+files.  Randomly small chunks of text or words will be decoded
+wrongly and random characters will appear in in place. It does
+not happen often in larger files but it is still a bad decode.
+When building my huffman tree I was unable to implement it in the
+same manner as specified in the assigment so I could not use the 
+provided tests to test my project.
+
+-----
+Usage
+-----
+
+This program is intedned to be compiled an run in a 
+Unix shell enviornment. The following steps must be made in 
+order to run thisprogram.
+
+	1. Place all of the program files in the same folder.
+
+	2. Type "make all" into the command line to compile
+	   all of the files.
+
+	3. To encode a file type the following into the
+	   command line: 
+           "./hencode [file to be encoded] {optional file to write to}".
+
+	4. When decodeing, be sure to pass hdecode a file
+	   that has been encoded with this hencode program or
+	   it will not decode properly. To decode type the
+	   following into the command line: 
+	  "./hdecode [file to be decoded] {optional file to write to}". 
