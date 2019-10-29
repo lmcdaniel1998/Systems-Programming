@@ -1,0 +1,3 @@
+hello my name is luke this is my medium test i really hope that it works because i've put a lot of time into this.
+I'll do a two line file because it will let me test out to see if I am registering the newline
+character. This better work or I will be sad.

@@ -1,0 +1,5 @@
+hello my name is luke.
+this is a short test of the get words program that I am writing
+it doesnt seem to be working on larger files so I thought that
+I would try it on a smaller one. If this doesnt work i might just be screwed for this class that is all im saying.
+anyway goodbye and please print.
