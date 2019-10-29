@@ -1,0 +1,78 @@
+-----------------------
+README for Assignment 6
+-----------------------
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+---------
+Designers
+---------
+
+David Sann (dsann) and Luke McDaniel (ltmcdani)
+
+-------------
+Functionality
+-------------
+
+This program is named mush, it stands for Minimally Useful Shell. 
+Its purpose is to take in commands from the user and run them as
+processes on the machine. This shell has the ability to perfrom both
+interactive and batch processing (will go over how to do both in
+Usage section), supports redirection with pipes, has a builting
+cd command, and (tenetivly supports SIGINT).
+
+The command line parser for mush has a fewh hard limit that you 
+cannot exceed. This applies for both interactive and batch processing.
+
+	1. Whole command line length cannot be longer than 512 bytes.
+
+	2. There can be no more than 10 commands in a pipeline.
+
+	3. Each command can have no more than 10 arguments.
+
+-----
+Usage
+-----
+
+This program is intended to be compiled an run in a 
+Unix shell enviornment. The following steps must be made in 
+order to run this program.
+
+Batch Processing:
+
+	1. Place all of the program files in the same folder.
+
+	2. Type "make" into the command line to compile
+	   all of the files.
+
+	3. To run mush with batch processing (commands taken taken
+	   from a file instead of user) type the following into 
+	   the command line:
+
+	   $./mush [batch_filename]
+
+	4. No output will be printed for batch processing but all
+	   of the processes will still run.
+
+Interactive Processing:
+
+	1. Place all of the program files in the same folder.
+
+	2. Type "make" into the command line to compile
+	   all of the files.
+
+	3. To run much with interactive processing type the
+	   following into the command line:
+
+	   $./mush
+
+	4. You can now enter command line arguments in mush and
+	   they will run.
+
+	5. To exit the program hit ctrl + d (^D).
+
+----------------
+Additional Notes
+----------------
+

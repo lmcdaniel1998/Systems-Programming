@@ -1,0 +1,63 @@
+-----------------------
+README for Assignment 4
+-----------------------
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+---------
+Designers
+---------
+
+David Sann (dsann) and Luke McDaniel (ltmcdani)
+
+-------------
+Functionality
+-------------
+
+This program is named mytar. It's purpose is to bundle files
+and directories into a single .tar file. This program can build
+and restore archives.
+
+There are 6 different flags that can be passed to mytar to
+change the way it behaves.
+
+	1. 'c' flag will create an archive
+	2. 't' flag will print the table of contents of archive
+	3. 'x' flag will extract the contents of an archive
+	4. 'v' flag will provide more information about files
+	   in the archive.
+	5. 'f' flag is required and specifies archive file name
+	6. 'S' flag forces mytar to be strict in its interpretation
+	   of the standar.
+
+-----
+Usage
+-----
+
+This program is intedned to be compiled an run in a 
+Unix shell enviornment. The following steps must be made in 
+order to run this program.
+
+the format for running mytar can be seen below:
+
+mytar [ctxvS]t tarfile [ path [ ... ] ]
+
+	1. Place all of the program files in the same folder.
+
+	2. Type "make" into the command line to compile
+	   all of the files.
+
+	3. To create an archive type the following into the command line:
+
+	   $mytar cvf tarfile [ path [ ... ] ]
+
+	4. To print the table of contents of an archive type the following
+	   into the command line:
+
+	   $mytar tvf tarfile
+
+	5. To extract the archive, navigate to the location where you want
+	   to extract to then type the following into the command line:
+
+	   $mytar xSf tarfile [ path [ ... ] ]

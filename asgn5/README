@@ -1,0 +1,52 @@
+-----------------------
+README for Assignment 5
+-----------------------
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+---------
+Designers
+---------
+
+David Sann (dsann) and Luke McDaniel (ltmcdani)
+
+-------------
+Functionality
+-------------
+
+This program is named parseline. Its purpose is to take in
+commands from the user and eventually pass it to mush
+(minimally useful shell). Currently it separates all
+commands and arguements and using pipes and redirections
+specifies the input and output of each command in a pipeline.
+
+This command line parser has a few hard limit that you cannot exceed.
+
+	1. Whole command line length cannot be longer than 512 bytes.
+
+	2. There can be no more than 10 commands in a pipeline.
+
+	3. Each command can have no more than 10 arguments.
+
+-----
+Usage
+-----
+
+This program is intedned to be compiled an run in a 
+Unix shell enviornment. The following steps must be made in 
+order to run this program.
+
+the format for running parseline can be seen below.
+
+	1. Place all of the program files in the same folder.
+
+	2. Type "make" into the command line to compile
+	   all of the files.
+
+	3. To run parseline type the following into the command line:
+
+	   $./parseline
+
+	4. The terminal will now display "line: " and you can enter
+	   the command you wish to parse.
